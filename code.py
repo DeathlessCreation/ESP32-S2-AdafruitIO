@@ -29,12 +29,16 @@ elif board.board_id == 'adafruit_feather_esp32s2':
     i2c_power = digitalio.DigitalInOut(board.I2C_POWER)
     i2c_power.direction = digitalio.Direction.OUTPUT
     i2c_power = True
-
+elif board.board_id == 'adafruit_qtpy_esp32s2':
+    import neopixel
+    addr_led = neopixel.NeoPixel(board.NEOPIXEL, 100)
+    addr_led[0] = status_magenta
 
 # Sensor initialization
 import adafruit_tmp117
 i2c = board.I2C()  # uses board.SCL and board.SDA
 tmp117 = adafruit_tmp117.TMP117(i2c)
+
 
 try:
     from secrets import secrets
