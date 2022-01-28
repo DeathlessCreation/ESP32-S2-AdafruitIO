@@ -4,6 +4,7 @@ ESP32-S2 posting to Adafruit IO via internal Wi-Fi.
 Currently supports the following boards:
 - Unexpected Maker [FeatherS2](https://feathers2.io/)
 - Adafruit [ESP32-S2 Feather](https://www.adafruit.com/product/5000)
+- Adafruit [QT Py ESP32-S2](https://www.adafruit.com/product/5325)
 
 The example is using a TMP117 temperature sensor connected via I2C.  Should be trivial to port to any board using the ESP32-S2 or to other sensors based on sample code and libraries for the specific sensor.
 
